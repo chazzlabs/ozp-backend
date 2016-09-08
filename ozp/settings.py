@@ -185,8 +185,8 @@ REST_FRAMEWORK = {
     'EXCEPTION_HANDLER': 'ozpcenter.errors.exception_handler',
     'DEFAULT_AUTHENTICATION_CLASSES': (
         # 'ozpcenter.auth.pkiauth.PkiAuthentication'
-        'rest_framework.authentication.BasicAuthentication',
-        # 'rest_framework.authentication.SessionAuthentication',
+        # 'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
         ),
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
