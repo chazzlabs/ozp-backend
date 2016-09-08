@@ -17,11 +17,12 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.contrib import admin
-
+from django.views.generic import RedirectView
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include('ozpcenter.urls')),
+    url(r'^api-auth/', RedirectView.as_view(pattern_name='login')),
     url(r'^iwc-api/', include('ozpiwc.urls')),
     url(r'^docs/', include('rest_framework_swagger.urls')),
 
