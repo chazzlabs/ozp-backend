@@ -22,7 +22,7 @@ from django.views.generic import RedirectView
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include('ozpcenter.urls')),
-    url(r'^api-auth/', RedirectView.as_view(pattern_name='login')),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^iwc-api/', include('ozpiwc.urls')),
     url(r'^docs/', include('rest_framework_swagger.urls')),
 
